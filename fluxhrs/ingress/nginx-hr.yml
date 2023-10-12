@@ -2,7 +2,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: ing
-  namespace: app
+  namespace: ingress-nginx
   annotations:
     clusterconfig.azure.com/use-managed-source: "true"
 spec:
@@ -13,8 +13,8 @@ spec:
       reconcileStrategy: Revision
       sourceRef:
         kind: GitRepository
-        name: flux-config-01
-        namespace: app
+        name: flux-config-02
+        namespace: ingress-nginx
   install:
     remediation:
       retries: -1
