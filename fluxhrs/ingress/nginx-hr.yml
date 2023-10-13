@@ -9,12 +9,12 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: charts/ingress-nginx/charts/ingress-nginx-4.8.1.tgz
+      chart: charts/ingress-nginx
       reconcileStrategy: Revision
       sourceRef:
         kind: GitRepository
         name: flux-config-02
-        namespace: ingress-nginx
+        namespace: ingress-nginx  
   install:
     remediation:
       retries: -1
