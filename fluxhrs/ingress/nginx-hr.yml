@@ -9,7 +9,7 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: charts/ingress-nginx
+      chart: charts/ingress-nginx/charts/ingress-nginx-4.8.1.tgz
       reconcileStrategy: Revision
       sourceRef:
         kind: GitRepository
